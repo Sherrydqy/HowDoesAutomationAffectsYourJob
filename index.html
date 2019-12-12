@@ -5,89 +5,89 @@
   	<title>How does automation affect your job?</title>
   	<meta name="description" content="A visualization">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel='stylesheet' href='../css/style.css'>
-    <script src="../library/d3.min.js"></script>
+  	<link rel='stylesheet' href='/css/style.css'>
+    <script src="/library/d3.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Cormorant:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.independent.js"></script>
-    <script src="../library/d3-annotation.js"></script>
-    <script src="../library/d3-annotation.independent.js"></script>
-    <script src="../library/noframework.waypoints.js"></script>
-    <script src="../library/lodash.min.js"></script>
-    <script src="../library/jquery.min.js"></script>
+    <script src="/library/d3-annotation.js"></script>
+    <script src="/library/d3-annotation.independent.js"></script>
+    <script src="/library/noframework.waypoints.js"></script>
+    <script src="/library/lodash.min.js"></script>
+    <script src="/library/jquery.min.js"></script>
   </head>
   <body>
     <div id="graphic">
       <div id="man">
-        <object id="manObject" data="../assets/man.svg"></object>
+        <object id="manObject" data="/assets/man.svg"></object>
       </div>
       <div id="shugan">
-        <object id="shuganObject" data="../assets/shugan.svg"></object>
+        <object id="shuganObject" data="/assets/shugan.svg"></object>
       </div>
       <div id="socialES">
-        <object id="socialESObject" data="../assets/socialES.svg"></object>
+        <object id="socialESObject" data="/assets/socialES.svg"></object>
       </div>
       <div id="TechS">
-        <object id="TechSObject" data="../assets/TechnologicalS.svg"></object>
+        <object id="TechSObject" data="/assets/TechnologicalS.svg"></object>
       </div>
       <div id="HigherCS">
-        <object id="HigherCSObject" data="../assets/HigherCS.svg"></object>
+        <object id="HigherCSObject" data="/assets/HigherCS.svg"></object>
       </div>
       <div id="BasicCS">
-        <object id="BasicCSObject" data="../assets/Basic Cognitive Skills.svg"></object>
+        <object id="BasicCSObject" data="/assets/Basic Cognitive Skills.svg"></object>
       </div>
       <div id="bulletb1">
-        <object data="../assets/OneBulletPoint.svg"></object>
+        <object data="/assets/OneBulletPoint.svg"></object>
       </div>
       <div id="bulletb2">
-        <object  data="../assets/OneBulletPoint0.svg"></object>
+        <object  data="/assets/OneBulletPoint0.svg"></object>
       </div>
       <div id="bulletb3">
-        <object data="../assets/OneBulletPoint1.svg"></object>
+        <object data="/assets/OneBulletPoint1.svg"></object>
       </div>
       <div id="bulletg1">
-        <object  data="../assets/OneBulletPoint2.svg"></object>
+        <object  data="/assets/OneBulletPoint2.svg"></object>
       </div>
       <div id="bulletg2">
-        <object  data="../assets/OneBulletPoint3.svg"></object>
+        <object  data="/assets/OneBulletPoint3.svg"></object>
       </div>
       <div id="bulletg3">
-        <object  data="../assets/OneBulletPoint4.svg"></object>
+        <object  data="/assets/OneBulletPoint4.svg"></object>
       </div>
       <div id="physicalCS">
-        <object id="physicalObject" data="../assets/Physical and Manual Skills.svg"></object>
+        <object id="physicalObject" data="/assets/Physical and Manual Skills.svg"></object>
       </div>
       <div id="prepareBg">
-        <object id="prepObject" data="../assets/prepareTc5Bg.svg"></object>
+        <object id="prepObject" data="/assets/prepareTc5Bg.svg"></object>
       </div>
       <div id="introBgLeaves">
-        <object  data="../assets/introBgLeaves.svg"></object>
+        <object  data="/assets/introBgLeaves.svg"></object>
       </div>
       <div id="secBgLeaves">
-        <object data="../assets/secBgLeaves.svg"></object>
+        <object data="/assets/secBgLeaves.svg"></object>
       </div>
       <div id="leaveBg">
-        <object id="leaveBgObject" data="../assets/leaveBg.svg"></object>
+        <object id="leaveBgObject" data="/assets/leaveBg.svg"></object>
       </div>
       <div id="market">
-        <object id="marketObject" data="../assets/Marketization of Unpaid Work.svg"></object>
+        <object id="marketObject" data="/assets/Marketization of Unpaid Work.svg"></object>
       </div>
       <div id="risingIncome">
-        <object id="risingIncomeObject" data="../assets/Rising Incomes.svg"></object>
+        <object id="risingIncomeObject" data="/assets/Rising Incomes.svg"></object>
       </div>
       <div id="energy">
-        <object id="energyObject" data="../assets/Sum of Investment in Energy Transitions and Efficiency.svg"></object>
+        <object id="energyObject" data="/assets/Sum of Investment in Energy Transitions and Efficiency.svg"></object>
       </div>
       <div id="infrastructure">
-        <object id="infrastructureObject" data="../assets/Sum of Investment in Infrasstructure.svg"></object>
+        <object id="infrastructureObject" data="/assets/Sum of Investment in Infrasstructure.svg"></object>
       </div>
       <div id="construction">
-        <object id="risingIncomeObject" data="../assets/Sum of Investment in Real Estate Construction.svg"></object>
+        <object id="risingIncomeObject" data="/assets/Sum of Investment in Real Estate Construction.svg"></object>
       </div>
       <div id="aging">
-        <object id="agingObject" data="../assets/Aging Health Care.svg"></object>
+        <object id="agingObject" data="/assets/Aging Health Care.svg"></object>
       </div>
       <div id="tech">
-        <object id="techObject" data="../assets/Technology Spending.svg"></object>
+        <object id="techObject" data="/assets/Technology Spending.svg"></object>
       </div>
       <div id="tooltipHistory" class="tooltip hidden">
         <span id="historyCat" style="font-size:18px;line-height: 1;font-weight: bold; color:#000"><strong>Cat</strong></span><br><br>
@@ -194,10 +194,10 @@
               <h4 style="line-height:1.6;">About half the activities people are paid to do globally could theoretically be automated using currently demonstrated technologies. In about 60 percent of occupations, at least one-third of the constituent activities could be automated, implying substantial workplace transformations and changes for all workers.</h4>
             </div>
             <div id="desert">
-              <object id="desertObject" data="../assets/desert.svg"></object>
+              <object id="desertObject" data="/assets/desert.svg"></object>
             </div>
             <div id="oasis">
-              <object id="oasisObject" data="../assets/oasis.svg"></object>
+              <object id="oasisObject" data="/assets/oasis.svg"></object>
             </div>
           </div>
           <div id="tc5">
@@ -293,5 +293,5 @@ workers, and waiters see some of the largest boosts from higher consumer spendin
 
     </div>
   </body>
-  <script src="../js/index.js"></script>
+  <script src="/js/index.js"></script>
 </html>
