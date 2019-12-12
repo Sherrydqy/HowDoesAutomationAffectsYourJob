@@ -13,6 +13,7 @@ var secBgLeaves = document.getElementById('secBgLeaves');
 var introBgLeaves = document.getElementById('introBgLeaves');
 var svgPreBg = document.getElementById('prepareBg');
 var originalColor;
+var flagtipDot, flagtipStack, flagtipLeaves, flagtipTree = 0;
 svgMan.style.marginLeft="47.5%";
 svgMan.style.marginTop="1%";
 var myJob = "I haven't selected my job.";
@@ -39,7 +40,7 @@ var xScaleJob, xAxisJob, yScaleJobCat, yScaleJobLine, yScaleJobAvg, xScaleStack,
 
 
 /*---------- Reading AP Data Starts-------*/
-d3.csv("../HowDoesAutomationAffectsYourJob/data/AP.csv").then(function(data){
+d3.csv("./data/AP.csv").then(function(data){
   console.log(data);
   data.forEach(function(d){
     d3.select("#jobDropDown")
@@ -171,7 +172,7 @@ d3.csv("../HowDoesAutomationAffectsYourJob/data/AP.csv").then(function(data){
 /*---------- Reading AP Data Ends-------*/
 
 /*---------- Reading History Data Starts-------*/
-d3.csv("../HowDoesAutomationAffectsYourJob/data/UMHistory.csv").then(function(data){
+d3.csv("../data/UMHistory.csv").then(function(data){
   console.log(data);
   xScaleStack = d3.scaleLinear()
                   .domain([1950, 2010])
@@ -235,6 +236,7 @@ d3.csv("../HowDoesAutomationAffectsYourJob/data/UMHistory.csv").then(function(da
                     return "historyRised";
                   }
                 })
+                .attr("stroke","white")
                 .attr("x", function(d){
                   return xScaleStack(parseInt(data[k].Year));
                 })
@@ -244,7 +246,7 @@ d3.csv("../HowDoesAutomationAffectsYourJob/data/UMHistory.csv").then(function(da
                 return yScaleStack(0)-prevH;
                 })
                 .attr("fill","rgb(0,0,0,0)")
-                .attr("stroke","gray")
+                .attr("stroke","rgb(200,200,200)")
                 .on("mouseover", function(d){
                   var thisId = d3.select(this)
                                  .attr("id");
@@ -261,8 +263,14 @@ d3.csv("../HowDoesAutomationAffectsYourJob/data/UMHistory.csv").then(function(da
                     .text(thisId.split("-")[0]);
                   d3.select("#historyEmploy")
                     .text(thisId.split("-")[2]);
-                  d3.select("#tooltipHistory")
-                    .classed("hidden", false);
+                    if(flagtipStack == 1){
+                      d3.select("#tooltipHistory")
+                        .classed("hidden", false);
+                    }else{
+                      d3.select("#tooltipHistory")
+                        .classed("hidden", true);
+                    }
+
                 })
                 .on("mouseout",function(d){
                   d3.select(this).style("fill",originalColor);
@@ -281,7 +289,7 @@ d3.csv("../HowDoesAutomationAffectsYourJob/data/UMHistory.csv").then(function(da
 });
 /*---------- Reading History Data Ends-------*/
 /*---------- Reading Leaves Data Ends-------*/
-d3.csv("../HowDoesAutomationAffectsYourJob/data/JobIncrease.csv").then(function(data){
+d3.csv("../data/JobIncrease.csv").then(function(data){
 
 })
 /*---------- Reading Leaves Data Ends-------*/
@@ -293,7 +301,7 @@ function changeMyJob(){
     myJob = document.getElementById("jobDropDown").options[myJobId].text;
   }
   //console.log(myJobId+": "+myJob);
-  d3.csv("../HowDoesAutomationAffectsYourJob/data/AP.csv").then(function(data){
+  d3.csv("../data/AP.csv").then(function(data){
     document.getElementById("data-ap").innerHTML = (data[myJobId].AP*100).toFixed(2)+"%"
     if(myJobId!=0){
 
@@ -324,7 +332,7 @@ function changeMyJob(){
 
       svg.append("g")
          .append("svg:image")
-         .attr("xlink:href","../HowDoesAutomationAffectsYourJob/assets/man.svg")
+         .attr("xlink:href","../assets/man.svg")
          .attr("x", function(d){
            console.log("thithithi: "+data[myJobId].Job);
                return xScaleJob(parseFloat(data[myJobId].AP)*100);
@@ -455,16 +463,20 @@ let fdiv2 =() =>{
   $('.apAvgs').css("opacity","1");
   $('.apDots').css("visibility","hidden");
   $('.apDots').css("opacity","0");
+  flagtipDot = 0;
 }
 let fdiv3 =() =>{
+  flagtipDot = 1;
   $('.apDots').css("visibility","visible");
   $('.apDots').css("opacity","1");
 }
 
 let tc3 =() =>{
+  flagtipDot = 0;
   svgMan.style.marginTop = "320%";
   svgMan.style.visibility = "visible";
   svgMan.style.opacity = 1;
+
   document.getElementById("tc3").style.visibility = "visible";
   document.getElementById("tc3").style.opacity=1;
   document.getElementById("fixed").style.visibility="hidden"
@@ -473,9 +485,11 @@ let tc3 =() =>{
   document.getElementById("fixedStack").style.opacity=0;
   document.getElementById("container").style.visibility="visible";
   document.getElementById("container").style.opacity=1;
+  flagtipStack = 0;
 }
 
 let fdiv1Sta =() =>{
+  flagtipStack = 1;
   svgMan.style.visibility = "hidden";
   svgMan.style.opacity = 0;
   document.getElementById("tc3").style.visibility = "hidden";
@@ -484,15 +498,16 @@ let fdiv1Sta =() =>{
   document.getElementById("fixedStack").style.opacity = 1;
   document.getElementById("containerStack").style.visibility="visible";
   document.getElementById("containerStack").style.opacity = 1;
-  $('.historyRised').css("fill","rgb(11,110,198,0)");
+  $('.historyRised').css("fill","rgb(120,150,256,0)");
   $('.historyReduced').css("fill","rgb(218,142,76,0)");
 }
 let fdiv2Sta =() =>{
-  $('.historyRised').css("fill","rgb(11,110,198,0)");
+  ;
+  $('.historyRised').css("fill","rgb(120,150,256,0)");
   $('.historyReduced').css("fill","rgb(218,142,76,0.8)");
 }
 let fdiv3Sta =() =>{
-  $('.historyRised').css("fill","rgb(11,110,198,0.8)");
+  $('.historyRised').css("fill","rgb(120,150,256,0.8)");
   $('.historyReduced').css("fill","rgb(218,142,76,0)");
   svgMan.style.visibility = "hidden";
   svgMan.style.opacity=0;
@@ -505,6 +520,7 @@ let fdiv3Sta =() =>{
 }
 
 let tc4 =() =>{
+  flagtipStack = 0;
   svgMan.style.marginTop = "20%";
   svgMan.style.position = "fixed";
   svgMan.style.visibility= "visible";
@@ -567,6 +583,7 @@ let tc5 =() =>{
 }
 
 let fdiv1Leaves =() =>{
+  flagtipLeaves = 1;
   svgOasis.style.visibility = "hidden";
   svgOasis.style.opacity=0;
   svgDesert.style.visibility = "hidden";
@@ -651,6 +668,8 @@ let fdiv4Leaves =() =>{
   svgDesert.style.opacity=0;
   svgMan.style.visibility = "hidden";
   svgMan.style.opacity=0;
+  svgPreBg.style.visibility = 'hidden';
+  svgPreBg.style.opacity = 0;
   document.getElementById("tech").style.opacity=0.2;
   document.getElementById("aging").style.opacity=0.2;
   document.getElementById("aging").style.opacity=0.2;
@@ -667,9 +686,15 @@ let fdiv4Leaves =() =>{
   document.getElementById("market").style.opacity=0.2;
   document.getElementById("tech").style.opacity=0.2;
   document.getElementById("energy").style.opacity=1;
+  document.getElementById("fixedTree").style.visibility="hidden";
+  document.getElementById("fixedTree").style.opacity=0;
+  document.getElementById("containerTree").style.visibility="hidden";
+  document.getElementById("containerTree").style.opacity=0;
 }
 
 let tc6 =() =>{
+  flagtipLeaves = 0;
+  flagtipTree = 0;
   svgMan.style.visibility= "visible";
   svgMan.style.opacity=1;
   svgPreBg.style.visibility = 'visible';
@@ -699,9 +724,14 @@ let tc6 =() =>{
   document.getElementById("market").style.opacity=0;
   document.getElementById("tech").style.opacity=0;
   document.getElementById("energy").style.opacity=0;
+  document.getElementById("vizTree").style.visibility= "hidden";
+  document.getElementById("vizTree").style.opacity = "0";
+  document.getElementById("shugan").style.visibility= "hidden";
+  document.getElementById("shugan").style.opacity = "0";
 }
 
 let div1Tree =() =>{
+  flagtipTree = 1;
     svgMan.style.visibility= "hidden";
     svgMan.style.opacity=0;
     svgPreBg.style.visibility = 'hidden';
@@ -710,6 +740,10 @@ let div1Tree =() =>{
     document.getElementById("vizTree").style.opacity = "1";
     document.getElementById("shugan").style.visibility= "visible";
     document.getElementById("shugan").style.opacity = "1";
+    document.getElementById("BasicCS").style.visibility= "hidden";
+    document.getElementById("BasicCS").style.opacity = "0";
+    document.getElementById("physicalCS").style.visibility= "hidden";
+    document.getElementById("physicalCS").style.opacity = "0";
 }
 
 let div2Tree =() =>{
@@ -721,6 +755,12 @@ let div2Tree =() =>{
     document.getElementById("BasicCS").style.opacity = "1";
     document.getElementById("physicalCS").style.visibility= "visible";
     document.getElementById("physicalCS").style.opacity = "1";
+    document.getElementById("TechS").style.visibility= "hidden";
+    document.getElementById("TechS").style.opacity = "0";
+    document.getElementById("socialES").style.visibility= "hidden";
+    document.getElementById("socialES").style.opacity = "0";
+    document.getElementById("HigherCS").style.visibility= "hidden";
+    document.getElementById("HigherCS").style.opacity = "0";
 }
 let div3Tree =() =>{
     svgMan.style.visibility= "hidden";
@@ -733,6 +773,12 @@ let div3Tree =() =>{
     document.getElementById("TechS").style.opacity = "1";
     document.getElementById("socialES").style.visibility= "visible";
     document.getElementById("socialES").style.opacity = "1";
+        document.getElementById("bulletb1").style.visibility= "hidden";
+    document.getElementById("bulletb1").style.opacity = "0";
+    document.getElementById("bulletb2").style.visibility= "hidden";
+    document.getElementById("bulletb2").style.opacity = "0";
+    document.getElementById("bulletb3").style.visibility= "hiddene";
+    document.getElementById("bulletb3").style.opacity = "0";
 }
 let div4Tree =() =>{
     svgMan.style.visibility= "hidden";
@@ -745,6 +791,12 @@ let div4Tree =() =>{
     document.getElementById("bulletb2").style.opacity = "1";
     document.getElementById("bulletb3").style.visibility= "visible";
     document.getElementById("bulletb3").style.opacity = "1";
+    document.getElementById("bulletg1").style.visibility= "hidden";
+    document.getElementById("bulletg1").style.opacity = "0";
+    document.getElementById("bulletg2").style.visibility= "hidden";
+    document.getElementById("bulletg2").style.opacity = "0";
+    document.getElementById("bulletg3").style.visibility= "hiddene";
+    document.getElementById("bulletg3").style.opacity = "0";
   //  d3.selectAll("path").fill("white");
 }
 let div5Tree =() =>{
@@ -759,6 +811,23 @@ let div5Tree =() =>{
     document.getElementById("bulletg2").style.opacity = "1";
     document.getElementById("bulletg3").style.visibility= "visible";
     document.getElementById("bulletg3").style.opacity = "1";
+}
+let tc7 =() =>{
+
+  svgOasis.style.visibility = "hidden";
+  svgOasis.style.opacity=0;
+  svgDesert.style.visibility = "hidden";
+  svgDesert.style.opacity=0;
+  svgMan.style.visibility = "hidden";
+  svgMan.style.opacity=0;
+  svgPreBg.style.visibility = 'hidden';
+  svgPreBg.style.opacity = 0;
+  document.getElementById("tc5").style.visibility = "hidden";
+  document.getElementById("tc5").style.opacity=0;
+  document.getElementById("fixedTree").style.visibility="hidden";
+  document.getElementById("fixedTree").style.opacity=0;
+  document.getElementById("containerTree").style.visibility="hidden";
+  document.getElementById("containerTree").style.opacity=0;
 }
 
 
@@ -800,6 +869,7 @@ new scroll('div2Tree', '75%',div2Tree,div1Tree);
 new scroll('div3Tree', '75%',div3Tree,div2Tree);
 new scroll('div4Tree', '75%',div4Tree,div3Tree);
 new scroll('div5Tree', '75%',div5Tree,div4Tree);
+new scroll('tc7', '75%',tc7,div5Tree);
 
 
 

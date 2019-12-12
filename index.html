@@ -5,89 +5,120 @@
   	<title>How does automation affect your job?</title>
   	<meta name="description" content="A visualization">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel='stylesheet' href='../HowDoesAutomationAffectsYourJob/css/style.css'>
-    <script src="../HowDoesAutomationAffectsYourJob/library/d3.min.js"></script>
+  	<link rel='stylesheet' href='./css/style.css'>
+    <script src="./library/d3.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Cormorant:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.independent.js"></script>
-    <script src="../HowDoesAutomationAffectsYourJob/library/d3-annotation.js"></script>
-    <script src="../HowDoesAutomationAffectsYourJob/library/d3-annotation.independent.js"></script>
-    <script src="../HowDoesAutomationAffectsYourJob/library/noframework.waypoints.js"></script>
-    <script src="../HowDoesAutomationAffectsYourJob/library/lodash.min.js"></script>
-    <script src="../HowDoesAutomationAffectsYourJob/library/jquery.min.js"></script>
+    <script src="./library/d3-annotation.js"></script>
+    <script src="./library/d3-annotation.independent.js"></script>
+    <script src="./library/noframework.waypoints.js"></script>
+    <script src="./library/lodash.min.js"></script>
+    <script src="./library/jquery.min.js"></script>
   </head>
   <body>
     <div id="graphic">
       <div id="man">
-        <object id="manObject" data="../HowDoesAutomationAffectsYourJob/assets/man.svg"></object>
+        <object id="manObject" data="../assets/man.svg"></object>
       </div>
       <div id="shugan">
-        <object id="shuganObject" data="../HowDoesAutomationAffectsYourJob/assets/shugan.svg"></object>
+        <object id="shuganObject" data="../assets/shugan.svg"></object>
       </div>
       <div id="socialES">
-        <object id="socialESObject" data="../HowDoesAutomationAffectsYourJob/assets/socialES.svg"></object>
+        <object id="socialESObject" data="../assets/socialES.svg"></object>
       </div>
       <div id="TechS">
-        <object id="TechSObject" data="../HowDoesAutomationAffectsYourJob/assets/TechnologicalS.svg"></object>
+        <object id="TechSObject" data="../assets/TechnologicalS.svg"></object>
       </div>
       <div id="HigherCS">
-        <object id="HigherCSObject" data="../HowDoesAutomationAffectsYourJob/assets/HigherCS.svg"></object>
+        <object id="HigherCSObject" data="../assets/HigherCS.svg"></object>
       </div>
       <div id="BasicCS">
-        <object id="BasicCSObject" data="../HowDoesAutomationAffectsYourJob/assets/Basic Cognitive Skills.svg"></object>
+        <object id="BasicCSObject" data="../assets/Basic Cognitive Skills.svg"></object>
       </div>
       <div id="bulletb1">
-        <object data="../HowDoesAutomationAffectsYourJob/assets/OneBulletPoint.svg"></object>
+        <object data="../assets/OneBulletPoint.svg"></object>
       </div>
       <div id="bulletb2">
-        <object  data="../HowDoesAutomationAffectsYourJob/assets/OneBulletPoint0.svg"></object>
+        <object id="bb2" data="../assets/OneBulletPoint0.svg"></object>
       </div>
       <div id="bulletb3">
-        <object data="../HowDoesAutomationAffectsYourJob/assets/OneBulletPoint1.svg"></object>
+        <object data="../assets/OneBulletPoint1.svg"></object>
       </div>
+      <div id="bulletb1">
+        <object data="../assets/OneBulletPoint.svg"></object>
+      </div>
+      <div id="bulletb2">
+        <object id="bb2" data="../assets/OneBulletPoint0.svg"></object>
+      </div>
+      <div id="bulletb3">
+        <object data="../assets/OneBulletPoint1.svg"></object>
+      </div>
+
+
       <div id="bulletg1">
-        <object  data="../HowDoesAutomationAffectsYourJob/assets/OneBulletPoint2.svg"></object>
+        <object  data="../assets/OneBulletPoint2.svg"></object>
       </div>
       <div id="bulletg2">
-        <object  data="../HowDoesAutomationAffectsYourJob/assets/OneBulletPoint3.svg"></object>
+        <object  data="../assets/OneBulletPoint3.svg"></object>
       </div>
       <div id="bulletg3">
-        <object  data="../HowDoesAutomationAffectsYourJob/assets/OneBulletPoint4.svg"></object>
+        <object  data="../assets/OneBulletPoint4.svg"></object>
       </div>
+
+      <div id="bulletbb1">
+        <object data="../assets/OneBulletPointW.svg"></object>
+      </div>
+      <div id="bulletbb2">
+        <object id="bb2" data="../assets/OneBulletPointW0.svg"></object>
+      </div>
+      <div id="bulletbb3">
+        <object data="../assets/OneBulletPointW1.svg"></object>
+      </div>
+      <div id="bulletgg1">
+        <object  data="../assets/OneBulletPointW2.svg"></object>
+      </div>
+      <div id="bulletgg2">
+        <object  data="../assets/OneBulletPointW3.svg"></object>
+      </div>
+      <div id="bulletgg3">
+        <object  data="../assets/OneBulletPointW4.svg"></object>
+      </div>
+
       <div id="physicalCS">
-        <object id="physicalObject" data="../HowDoesAutomationAffectsYourJob/assets/Physical and Manual Skills.svg"></object>
+        <object id="physicalObject" data="../assets/Physical and Manual Skills.svg"></object>
       </div>
       <div id="prepareBg">
-        <object id="prepObject" data="../HowDoesAutomationAffectsYourJob/assets/prepareTc5Bg.svg"></object>
+        <object id="prepObject" data="../assets/prepareTc5Bg.svg"></object>
       </div>
       <div id="introBgLeaves">
-        <object  data="../HowDoesAutomationAffectsYourJob/assets/introBgLeaves.svg"></object>
+        <object  data="../assets/introBgLeaves.svg"></object>
       </div>
       <div id="secBgLeaves">
-        <object data="../HowDoesAutomationAffectsYourJob/assets/secBgLeaves.svg"></object>
+        <object data="../assets/secBgLeaves.svg"></object>
       </div>
       <div id="leaveBg">
-        <object id="leaveBgObject" data="../HowDoesAutomationAffectsYourJob/assets/leaveBg.svg"></object>
+        <object id="leaveBgObject" data="../assets/leaveBg.svg"></object>
       </div>
       <div id="market">
-        <object id="marketObject" data="../HowDoesAutomationAffectsYourJob/assets/Marketization of Unpaid Work.svg"></object>
+        <object id="marketObject" data="../assets/Marketization of Unpaid Work.svg"></object>
       </div>
       <div id="risingIncome">
-        <object id="risingIncomeObject" data="../HowDoesAutomationAffectsYourJob/assets/Rising Incomes.svg"></object>
+        <object id="risingIncomeObject" data="../assets/Rising Incomes.svg"></object>
       </div>
       <div id="energy">
-        <object id="energyObject" data="../HowDoesAutomationAffectsYourJob/assets/Sum of Investment in Energy Transitions and Efficiency.svg"></object>
+        <object id="energyObject" data="../assets/Sum of Investment in Energy Transitions and Efficiency.svg"></object>
       </div>
       <div id="infrastructure">
-        <object id="infrastructureObject" data="../HowDoesAutomationAffectsYourJob/assets/Sum of Investment in Infrasstructure.svg"></object>
+        <object id="infrastructureObject" data="../assets/Sum of Investment in Infrasstructure.svg"></object>
       </div>
       <div id="construction">
-        <object id="risingIncomeObject" data="../HowDoesAutomationAffectsYourJob/assets/Sum of Investment in Real Estate Construction.svg"></object>
+        <object id="risingIncomeObject" data="../assets/Sum of Investment in Real Estate Construction.svg"></object>
       </div>
       <div id="aging">
-        <object id="agingObject" data="../HowDoesAutomationAffectsYourJob/assets/Aging Health Care.svg"></object>
+        <object id="agingObject" data="../assets/Aging Health Care.svg"></object>
       </div>
       <div id="tech">
-        <object id="techObject" data="../HowDoesAutomationAffectsYourJob/assets/Technology Spending.svg"></object>
+        <object id="techObject" data="../assets/Technology Spending.svg"></object>
       </div>
       <div id="tooltipHistory" class="tooltip hidden">
         <span id="historyCat" style="font-size:18px;line-height: 1;font-weight: bold; color:#000"><strong>Cat</strong></span><br><br>
@@ -101,7 +132,7 @@
       </div>
       <div id="containerCenter" class="container-center" >
         <div id="tc1" >
-          <h2 style="line-height:2">How will automation affects your job?</h2>
+          <h2 style="line-height:1">How will automation affects your job?<br><span style="font-size:18px">By Qinyu Ding</span></h2>
           <h4 style="text-align:center;">Automation has brought us higher production rate and increased productivity,
             thus becoming more and more popular in our life. However, fears about the transformation of automation of
             the workplace and effects on employment date back centuries. Fast forward and rapid recent advances in
@@ -167,13 +198,18 @@
          <div id="containerStack" class="container">
 
            <div id="div1Sta">
-             Roles in more cut-and-dried
+             <h4>Technology adoption can and often does cause
+significant short-term labor displacement, but history
+shows that, in the longer run, it creates a multitude of new
+jobs and unleashes demand for existing ones, more than
+offsetting the number of jobs it destroys even as it raises
+labor productivity</h4>
            </div>
            <div id="div2Sta">
-             <h4>Roles in more cut-and-dried activity areas or those which require less human intelligence are most likely to be impacted by automation.</h4>
+             <h4 >Throughout these large shifts of workers across occupations and industries, jobs in <strong style="color:rgb(218,142,76);">manufacturing, mining, and algriculture</strong> declined in employment.</h4>
            </div>
            <div id="div3Sta">
-             <h4>Automation could displace a significant share of work in the future.</h4>
+             <h4>However, these declines have been more than offeset by increasement in employment in other sectors, like <strong style="color:rgb(120,150,256)">Utilities, Construction, Trade, restaurants and hotels, Transport, storage and communication, Finance, insurance, real estate and business services, Government services, Community, social and personal services</strong></h4>
            </div>
          </div>
       <!-- svg -->
@@ -194,10 +230,10 @@
               <h4 style="line-height:1.6;">About half the activities people are paid to do globally could theoretically be automated using currently demonstrated technologies. In about 60 percent of occupations, at least one-third of the constituent activities could be automated, implying substantial workplace transformations and changes for all workers.</h4>
             </div>
             <div id="desert">
-              <object id="desertObject" data="../HowDoesAutomationAffectsYourJob/assets/desert.svg"></object>
+              <object id="desertObject" data="../assets/desert.svg"></object>
             </div>
             <div id="oasis">
-              <object id="oasisObject" data="../HowDoesAutomationAffectsYourJob/assets/oasis.svg"></object>
+              <object id="oasisObject" data="../assets/oasis.svg"></object>
             </div>
           </div>
           <div id="tc5">
@@ -210,8 +246,7 @@
 
             <div id="div1Leaves">
               <h4>There are seven identified global trend that can potentially contribute to increasing labor demand to 2030, including:</h4>
-              <h4 style="font-size:20px">
-&nbsp&nbsp&nbsprising incomes<br>&nbsp&nbsp&nbspaging health care<br>&nbsp&nbsp&nbsptechnology spending<br>&nbsp&nbsp&nbspinvestment in real estate construction<br>&nbsp&nbsp&nbspinvestment in infrastructure<br>&nbsp&nbsp&nbspinvestment in energy transitions and efficiency<br>  &nbsp&nbsp&nbspmarketization of unpaid work.</h4>
+              <h4 style="font-size:20px"><li>rising incomes<li>aging health care<li>technology spending<li>investment in real estate construction<li>investment in infrastructure<li>investment in energy transitions and efficiency<li>marketization of unpaid work.</h4>
             </div>
             <div id="div2Leaves">
               <h4>Rising incomes in emerging economies will create the largest-scale new labor
@@ -263,24 +298,52 @@ workers, and waiters see some of the largest boosts from higher consumer spendin
            <div id="containerTree" class="container">
 
              <div id="div1Tree">
-               <h4>Roles in more cut-and-dried</h4>
+               <h4>Individuals will need to be prepared for a rapidly evolving future of work. Acquiring new skills
+that are in demand and resetting intuition about the world of work will be critical for wellbeing.
+In the future, the demand for different skill sets will also be affected by automation.</h4>
+
              </div>
              <div id="div2Tree">
-               <h4>Roles in more cut-and-dried activity areas or those which require less human intelligence are most likely to be impacted by automation.</h4>
+               <h4>Some skill categories will be less in demand.</h4><h4> <strong>Basic cognitive skills</strong>, which include basic
+               data input and processing, will decline by 15 percent, falling to 14 percent of hours worked
+from 18 percent.</h4><h4> Demand for <strong>physical and manual skills</strong>, which include general equipment
+operation, will also drop, by 14 percent, but will remain the largest category of workforce
+skills in 2030 in many countries, accounting for 25 percent of the total hours worked.</h4>
              </div>
              <div id="div3Tree">
-               <h4>Automation could displace a significant share of work in the future.</h4>
+               <h4>The strongest growth in demand will be for <strong>technological
+skills</strong>, the smallest category today, which will rise by 55 percent and by 2030 will represent
+17 percent of hours worked, up from 11 percent in 2016.</h4>
+<h4>Demand for <strong>social and emotional skills</strong> such as leadership and managing others will rise
+by 24 percent, to 22 percent of hours worked.</h4><h4> Demand for <strong>higher cognitive skills</strong> will grow
+moderately overall, but will rise sharply for some of these skills, especially creativity.</h4>
              </div>
              <div id="div4Tree">
-               <h4>Roles in more cut-and-dried activity areas or those which require less human intelligence are most likely to be impacted by automation.</h4>
+               <h4>From the perspective of business, business leaders should embrace automation and AI while carefully managing workforce transition:</h4>
+               <h4>
+                 <li>Accelerate deployment of automation and AI, as they have potential to
+improve forecasting and sourcing, optimize and automate operations, develop targeted
+marketing and pricing, and enhance the customer experience.</h4>
+<h4><li>Redesign businesses processes to unlock productivity gains. Companies should conduct research to understand how to implement the sort of changes that will be needed to
+harness the full potential of automation.</h4>
+<h4><li>Adapt talent strategy and manage workforce transitions. This will involve a combination of recruiting automation-savvy
+professionals, as well as retraining workers to play new roles.</h4>
+               </h4>
              </div>
              <div id="div5Tree">
-               <h4>Automation could displace a significant share of work in the future.</h4>
+               <h4>Furthermore, governments must make workforce transitions and job creation a more urgent priority.</h4>
+               <h4><li>Radically scale midcareer training opportunities to make lifelong learning a reality.</h4>
+                  <h4><li>Make job creation and worker re-deployment a national priority. More investment is needed for encouraging companies to invest in worker training and redeployment through tax and
+other incentives, supporting entrepreneurship and small business creation by
+streamlining regulations and revisiting personal bankruptcy laws that discourage risktaking.</h4>
+                     <h4><li>Expand transition support measures for workers. Gorverment should focuse labor agencies on reemployment
+and the acquisition of new skills, rather than simply on handing out unemployment
+benefits or controlling for fraud.</h4>
              </div>
            </div>
         <!-- svg -->
             <div id="fixedTree" class="fixed" >
-              <h4 class="chartTitleTree" style="z-index:100;margin-left:8%;line-height: 1.5;font-size:16px;font-weight:bold; font-family:Arial;"> Share of total employment by sector in the United States, 1950–2010</h4>
+              <h4 class="chartTitleTree" style="z-index:100;margin-left:8%;line-height: 1.5;font-size:16px;font-weight:bold; font-family:Arial;">Efforts need to be done by individuals, businesses, and governments</h4>
 
               <svg id="vizTree" width="100%" height="100%" style="z-index:90; visibility:hidden;opacity:0;  ">
               </svg>
@@ -290,8 +353,16 @@ workers, and waiters see some of the largest boosts from higher consumer spendin
                 <div style="font-size:10px; color:#000" >had the employment of </strong><span id="historyEmploy" contenteditable=”true”>111</span> thousand.</div>
               </div>-->
             </div>
+            <div id="tc7" style="background:black">
+              <div id="ap-txt" style="width:46%;padding-left:5%;">
+                <h3 style="text-align:left; width:100%">SOURCES</h3>
+                <h4 style="line-height:1.6; text-align:left;font-size:16px"><i>JOBS LOST, JOBS GAINED: WORKFORCE TRANSITIONS IN A TIME OF AUTOMATION.</i> (2017, December). Retrieved from https://www.mckinsey.com/~/media/McKinsey/Featured Insights/Future of Organizations/What the future of work will mean for jobs skills and wages/MGI-Jobs-Lost-Jobs-Gained-Report-December-6-2017.ashx.</h4>
+                <h4 style="line-height:1.6; text-align:left;font-size:16px"><i>SKILL SHIFT AUTOMATION AND THE FUTURE OF THE WORKFORCE. (2018, May). Retrieved from https://www.mckinsey.com/~/media/mckinsey/featured insights/future of organizations/skill shift automation and the future of the workforce/mgi-skill-shift-automation-and-future-of-the-workforce-may-2018.ashx.</i></h4>
 
+
+              </div>
+            </div>
     </div>
   </body>
-  <script src="../HowDoesAutomationAffectsYourJob/js/index.js"></script>
+  <script src="../js/index.js"></script>
 </html>

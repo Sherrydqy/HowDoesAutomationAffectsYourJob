@@ -86,6 +86,7 @@ option{
   -webkit-transition: all 1s ease; /* Safari 和 Chrome */
   -o-transition: all 1s ease; /* Opera */
 }
+
 #desert{
   width: 100%;
   top: 50%;
@@ -272,10 +273,38 @@ option{
   -webkit-transition: all 1s ease; /* Safari 和 Chrome */
   -o-transition: all 1s ease; /* Opera */
 }
+#bulletbb1{
+  width:10%;
+  left:53%;
+  top: 50%;
+  transform: rotate(-90deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
 #bulletb2{
   width:10%;
   left:61%;
-  top: 32%;
+  top: 23%;
+  transform: rotate(-30deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#bulletbb2{
+  width:10%;
+  left:61%;
+  top: 23%;
   transform: rotate(-30deg);
   position: fixed;
   z-index: 80;
@@ -300,7 +329,7 @@ option{
   -webkit-transition: all 1s ease; /* Safari 和 Chrome */
   -o-transition: all 1s ease; /* Opera */
 }
-#bulletg1{
+#bulletbb3{
   width:10%;
   left:71%;
   top: 37%;
@@ -314,10 +343,53 @@ option{
   -webkit-transition: all 1s ease; /* Safari 和 Chrome */
   -o-transition: all 1s ease; /* Opera */
 }
+#bulletg1{
+  width:10%;
+  left:52%;
+  top: 37%;
+  transform: rotate(-170deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#bulletgg1{
+  width:10%;
+  left:52%;
+  top: 37%;
+  transform: rotate(-170deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
 #bulletg2{
-  width:20%;
-  left:43%;
-  top: 30%;
+  width:10%;
+  left:72%;
+  top: 25%;
+  transform: rotate(-90deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#bulletgg2{
+  width:10%;
+  left:72%;
+  top: 25%;
+  transform: rotate(-90deg);
   position: fixed;
   z-index: 80;
   visibility:hidden;
@@ -328,9 +400,24 @@ option{
   -o-transition: all 1s ease; /* Opera */
 }
 #bulletg3{
-  width:20%;
-  left:43%;
-  top: 30%;
+  width:10%;
+  left:79%;
+  top: 39%;
+  transform: rotate(-50deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#bulletgg3{
+  width:10%;
+  left:79%;
+  top: 39%;
+  transform: rotate(-50deg);
   position: fixed;
   z-index: 80;
   visibility:hidden;
@@ -500,11 +587,14 @@ option{
   -o-transition: all 1s ease; /* Opera */
 }
 .historyRised{
-  fill:rgb(11,110,198,0);
+  fill:rgb(120,150,256,0);
   transition: all 0.5s linear;
   -moz-transition: all 0.5s linear; /* Firefox 4 */
   -webkit-transition: all 0.5s linear; /* Safari 和 Chrome */
   -o-transition: all 0.5s linear; /* Opera */
+}
+strong{
+  font-weight: 700;
 }
 .historyReduced{
   fill:rgb(218,142,76,0);
@@ -595,6 +685,20 @@ option{
   height: 100%;
   width: 100%;
   margin-Top: 2000px;
+  line-height: 1.6;
+  visibility:visible;
+  opacity:1;
+  z-index : 100;
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
+}
+#tc7{
+  height: 760px;
+  width: 100%;
+  align-content: left;
+  margin-Top: 3100px;
   line-height: 1.6;
   visibility:visible;
   opacity:1;
