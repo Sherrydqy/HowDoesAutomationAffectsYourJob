@@ -32,7 +32,7 @@ h4{
   font-family: 'Cormorant', serif;
   font-weight: 300;
   z-index: 100;
-  line-height: 1.5;
+  line-height: 1.49;
   color: white;
 }
 span{
@@ -81,10 +81,10 @@ option{
   z-index: 100;
   visibility:visible;
   opacity:1;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #desert{
   width: 100%;
@@ -93,10 +93,10 @@ option{
   z-index: 70;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #oasis{
   width: 0%;
@@ -106,10 +106,24 @@ option{
   z-index: 70;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#prepareBg{
+  width:60%;
+  margin:20% 20%;
+  position: fixed;
+  left:0;
+  right:0;
+  z-index: 0;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #introBgLeaves{
   width:50%;
@@ -120,10 +134,10 @@ option{
   z-index: 0;
   visibility:visible;
   opacity:1;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #secBgLeaves{
   width:100%;
@@ -134,10 +148,10 @@ option{
   z-index: 70;
   visibility:visible;
   opacity:1;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #leaveBg{
   width: 65%;
@@ -147,10 +161,10 @@ option{
   z-index: 70;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #aging{
   width:4.83%;
@@ -160,12 +174,172 @@ option{
   z-index: 80;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#shugan{
+  width:20%;
+  left:62%;
+  top: 50%;
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#BasicCS{
+  width:3%;
+  left:74%;
+  top: 84%;
+  position: fixed;
+  z-index: 70;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#physicalCS{
+  width:4.2%;
+  left:65.5%;
+  top: 84%;
+  position: fixed;
+  z-index: 70;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#HigherCS{
+  width:2.1%;
+  left:65%;
+  top: 43%;
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#socialES{
+  width:6.2%;
+  left:60%;
+  top: 64%;
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#TechS{
+  width:14%;
+  left:73%;
+  top: 50%;
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 
+#bulletb1{
+  width:10%;
+  left:53%;
+  top: 50%;
+  transform: rotate(-90deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#bulletb2{
+  width:10%;
+  left:61%;
+  top: 32%;
+  transform: rotate(-30deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#bulletb3{
+  width:10%;
+  left:71%;
+  top: 37%;
+  transform: rotate(30deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#bulletg1{
+  width:10%;
+  left:71%;
+  top: 37%;
+  transform: rotate(30deg);
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#bulletg2{
+  width:20%;
+  left:43%;
+  top: 30%;
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
+#bulletg3{
+  width:20%;
+  left:43%;
+  top: 30%;
+  position: fixed;
+  z-index: 80;
+  visibility:hidden;
+  opacity:0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
+}
 #risingIncome{
   width:20%;
   left:43%;
@@ -174,10 +348,10 @@ option{
   z-index: 80;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #market{
   width:5.015%;
@@ -187,10 +361,10 @@ option{
   z-index: 80;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #energy{
   width:2.6586%;
@@ -200,10 +374,10 @@ option{
   z-index: 80;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #infrastructure{
   width:6.223565%;
@@ -213,10 +387,10 @@ option{
   z-index: 80;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #construction{
   width:9.0634%;
@@ -226,10 +400,10 @@ option{
   z-index: 80;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #tech{
   width:2.84%;
@@ -239,10 +413,10 @@ option{
   z-index: 80;
   visibility:hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 #rect-Auto{
   height:100%;
@@ -306,24 +480,24 @@ option{
   opacity:0;
   transition: all 1s ease;
   -moz-transition: all 1s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 .apDots{
   visibility: hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 .apAvgs{
   visibility: hidden;
   opacity:0;
-  transition: all 2s ease;
-  -moz-transition: all 2s ease; /* Firefox 4 */
-  -webkit-transition: all 2s ease; /* Safari 和 Chrome */
-  -o-transition: all 2s ease; /* Opera */
+  transition: all 1s ease;
+  -moz-transition: all 1s ease; /* Firefox 4 */
+  -webkit-transition: all 1s ease; /* Safari 和 Chrome */
+  -o-transition: all 1s ease; /* Opera */
 }
 .historyRised{
   fill:rgb(11,110,198,0);
@@ -346,10 +520,10 @@ option{
   align-content: center;
   margin: 0;
   position: absolute;
-  transition: all 2s linear;
-  -moz-transition: all 2s linear; /* Firefox 4 */
-  -webkit-transition: all 2s linear; /* Safari 和 Chrome */
-  -o-transition: all 2s linear; /* Opera */
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
 }
 .container-center #tc1{
   height: 100%;
@@ -359,10 +533,10 @@ option{
   line-height: 1.5;
   visibility:visible;
   opacity:1;
-  transition: all 2s linear;
-  -moz-transition: all 2s linear; /* Firefox 4 */
-  -webkit-transition: all 2s linear; /* Safari 和 Chrome */
-  -o-transition: all 2s linear; /* Opera */
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
 }
 
 .container-center #tc2{
@@ -373,10 +547,10 @@ option{
   visibility: hidden;
   opacity:0;
   z-index : 100;
-  transition: all 2s linear;
-  -moz-transition: all 2s linear; /* Firefox 4 */
-  -webkit-transition: all 2s linear; /* Safari 和 Chrome */
-  -o-transition: all 2s linear; /* Opera */
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
 }
 #tc3{
   height: 100%;
@@ -386,10 +560,10 @@ option{
   visibility:hidden;
   opacity:0;
   z-index : 100;
-  transition: all 2s linear;
-  -moz-transition: all 2s linear; /* Firefox 4 */
-  -webkit-transition: all 2s linear; /* Safari 和 Chrome */
-  -o-transition: all 2s linear; /* Opera */
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
 }
 #tc4{
   height: 100%;
@@ -399,10 +573,10 @@ option{
   visibility:hidden;
   opacity:0;
   z-index : 100;
-  transition: all 2s linear;
-  -moz-transition: all 2s linear; /* Firefox 4 */
-  -webkit-transition: all 2s linear; /* Safari 和 Chrome */
-  -o-transition: all 2s linear; /* Opera */
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
 }
 #tc5{
   height: 100%;
@@ -412,17 +586,30 @@ option{
   visibility:visible;
   opacity:0;
   z-index : 100;
-  transition: all 2s linear;
-  -moz-transition: all 2s linear; /* Firefox 4 */
-  -webkit-transition: all 2s linear; /* Safari 和 Chrome */
-  -o-transition: all 2s linear; /* Opera */
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
+}
+#tc6{
+  height: 100%;
+  width: 100%;
+  margin-Top: 2000px;
+  line-height: 1.6;
+  visibility:visible;
+  opacity:1;
+  z-index : 100;
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
 }
 #allRects rect{
   fill:none;
-  transition: all 2s linear;
-  -moz-transition: all 2s linear; /* Firefox 4 */
-  -webkit-transition: all 2s linear; /* Safari 和 Chrome */
-  -o-transition: all 2s linear; /* Opera */
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
 }
 .container {
   height: 700px;
@@ -432,10 +619,10 @@ option{
   line-height: 1.5;
   visibility:hidden;
   opacity:0;
-  transition: all 2s linear;
-  -moz-transition: all 2s linear; /* Firefox 4 */
-  -webkit-transition: all 2s linear; /* Safari 和 Chrome */
-  -o-transition: all 2s linear; /* Opera */
+  transition: all 1s linear;
+  -moz-transition: all 1s linear; /* Firefox 4 */
+  -webkit-transition: all 1s linear; /* Safari 和 Chrome */
+  -o-transition: all 1s linear; /* Opera */
 }
 .container div{
   height: 100%;

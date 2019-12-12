@@ -11,6 +11,7 @@ var svgConstruction = document.getElementById('construction');
 var svgTech = document.getElementById('tech');
 var secBgLeaves = document.getElementById('secBgLeaves');
 var introBgLeaves = document.getElementById('introBgLeaves');
+var svgPreBg = document.getElementById('prepareBg');
 var originalColor;
 svgMan.style.marginLeft="47.5%";
 svgMan.style.marginTop="1%";
@@ -555,6 +556,14 @@ let tc5 =() =>{
   document.getElementById("energy").style.opacity=0;
   leaveBg.style.visibility="hidden";
   leaveBg.style.opacity=0;
+  document.getElementById("fixedStack").style.visibility="hidden";
+  document.getElementById("fixedStack").style.opacity=0;
+  document.getElementById("containerStack").style.visibility="hidden";
+  document.getElementById("containerStack").style.opacity=0;
+  document.getElementById("fixedLeaves").style.visibility="hidden";
+  document.getElementById("fixedLeaves").style.opacity=0;
+  document.getElementById("containerLeaves").style.visibility="hidden";
+  document.getElementById("containerLeaves").style.opacity=0;
 }
 
 let fdiv1Leaves =() =>{
@@ -660,6 +669,99 @@ let fdiv4Leaves =() =>{
   document.getElementById("energy").style.opacity=1;
 }
 
+let tc6 =() =>{
+  svgMan.style.visibility= "visible";
+  svgMan.style.opacity=1;
+  svgPreBg.style.visibility = 'visible';
+  svgPreBg.style.opacity = 1;
+  leaveBg.style.visibility="hidden";
+  leaveBg.style.opacity=0;
+  document.getElementById("fixedStack").style.visibility="hidden";
+  document.getElementById("fixedStack").style.opacity=0;
+  document.getElementById("containerStack").style.visibility="hidden";
+  document.getElementById("containerStack").style.opacity=0;
+  document.getElementById("fixedLeaves").style.visibility="hidden";
+  document.getElementById("fixedLeaves").style.opacity=0;
+  document.getElementById("containerLeaves").style.visibility="hidden";
+  document.getElementById("containerLeaves").style.opacity=0;
+  document.getElementById("fixedTree").style.visibility="visible";
+  document.getElementById("fixedTree").style.opacity=1;
+  document.getElementById("containerTree").style.visibility="visible";
+  document.getElementById("containerTree").style.opacity=1;
+  document.getElementById("fixedLeaves").style.visibility="hidden";
+  document.getElementById("fixedLeaves").style.opacity=0;
+  document.getElementById("containerLeaves").style.visibility="hidden";
+  document.getElementById("containerLeaves").style.opacity=0;
+  document.getElementById("risingIncome").style.opacity=0;
+  document.getElementById("construction").style.opacity=0;
+  document.getElementById("infrastructure").style.opacity=0;
+  document.getElementById("aging").style.opacity=0;
+  document.getElementById("market").style.opacity=0;
+  document.getElementById("tech").style.opacity=0;
+  document.getElementById("energy").style.opacity=0;
+}
+
+let div1Tree =() =>{
+    svgMan.style.visibility= "hidden";
+    svgMan.style.opacity=0;
+    svgPreBg.style.visibility = 'hidden';
+    svgPreBg.style.opacity = 0;
+    document.getElementById("vizTree").style.visibility= "visible";
+    document.getElementById("vizTree").style.opacity = "1";
+    document.getElementById("shugan").style.visibility= "visible";
+    document.getElementById("shugan").style.opacity = "1";
+}
+
+let div2Tree =() =>{
+    svgMan.style.visibility= "hidden";
+    svgMan.style.opacity=0;
+    svgPreBg.style.visibility = 'hidden';
+    svgPreBg.style.opacity = 0;
+    document.getElementById("BasicCS").style.visibility= "visible";
+    document.getElementById("BasicCS").style.opacity = "1";
+    document.getElementById("physicalCS").style.visibility= "visible";
+    document.getElementById("physicalCS").style.opacity = "1";
+}
+let div3Tree =() =>{
+    svgMan.style.visibility= "hidden";
+    svgMan.style.opacity=0;
+    svgPreBg.style.visibility = 'hidden';
+    svgPreBg.style.opacity = 0;
+    document.getElementById("HigherCS").style.visibility= "visible";
+    document.getElementById("HigherCS").style.opacity = "1";
+    document.getElementById("TechS").style.visibility= "visible";
+    document.getElementById("TechS").style.opacity = "1";
+    document.getElementById("socialES").style.visibility= "visible";
+    document.getElementById("socialES").style.opacity = "1";
+}
+let div4Tree =() =>{
+    svgMan.style.visibility= "hidden";
+    svgMan.style.opacity=0;
+    svgPreBg.style.visibility = 'hidden';
+    svgPreBg.style.opacity = 0;
+    document.getElementById("bulletb1").style.visibility= "visible";
+    document.getElementById("bulletb1").style.opacity = "1";
+    document.getElementById("bulletb2").style.visibility= "visible";
+    document.getElementById("bulletb2").style.opacity = "1";
+    document.getElementById("bulletb3").style.visibility= "visible";
+    document.getElementById("bulletb3").style.opacity = "1";
+  //  d3.selectAll("path").fill("white");
+}
+let div5Tree =() =>{
+
+    svgMan.style.visibility= "hidden";
+    svgMan.style.opacity=0;
+    svgPreBg.style.visibility = 'hidden';
+    svgPreBg.style.opacity = 0;
+    document.getElementById("bulletg1").style.visibility= "visible";
+    document.getElementById("bulletg1").style.opacity = "1";
+    document.getElementById("bulletg2").style.visibility= "visible";
+    document.getElementById("bulletg2").style.opacity = "1";
+    document.getElementById("bulletg3").style.visibility= "visible";
+    document.getElementById("bulletg3").style.opacity = "1";
+}
+
+
 //waypoints scroll constructor
 function scroll(n, offset, func1, func2){
   //if(myJob!=null){
@@ -692,6 +794,13 @@ new scroll('div1Leaves', '75%',fdiv1Leaves, tc5);
 new scroll('div2Leaves', '75%',fdiv2Leaves, fdiv1Leaves);
 new scroll('div3Leaves', '75%',fdiv3Leaves, fdiv2Leaves);
 new scroll('div4Leaves', '75%',fdiv4Leaves, fdiv3Leaves);
+new scroll('tc6', '75%',tc6, fdiv4Leaves);
+new scroll('div1Tree', '75%',div1Tree, tc6);
+new scroll('div2Tree', '75%',div2Tree,div1Tree);
+new scroll('div3Tree', '75%',div3Tree,div2Tree);
+new scroll('div4Tree', '75%',div4Tree,div3Tree);
+new scroll('div5Tree', '75%',div5Tree,div4Tree);
+
 
 
 
