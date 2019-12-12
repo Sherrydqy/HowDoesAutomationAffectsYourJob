@@ -774,7 +774,7 @@ strong{
 
 .tooltip{
   position: absolute;
-  width:250px;
+  width:280px;
   height: auto;
   padding: 10px;
   background-color: white;
@@ -790,7 +790,7 @@ strong{
   margin-top: 30px;
   height:20px;
 }
-#historyXAxis path{
+#XAxis path{
 
 }
 .historyAvgs{

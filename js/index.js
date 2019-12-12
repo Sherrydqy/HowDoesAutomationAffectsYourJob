@@ -13,7 +13,7 @@ var secBgLeaves = document.getElementById('secBgLeaves');
 var introBgLeaves = document.getElementById('introBgLeaves');
 var svgPreBg = document.getElementById('prepareBg');
 var originalColor;
-var flagtipDot, flagtipStack, flagtipLeaves, flagtipTree = 0;
+var flagtipRect,flagtipDots, flagtipStack, flagtipLeaves, flagtipTree = 0;
 svgMan.style.marginLeft="47.5%";
 svgMan.style.marginTop="1%";
 var myJob = "I haven't selected my job.";
@@ -111,7 +111,38 @@ d3.csv("./data/AP.csv").then(function(data){
      })
      .attr("width", 5)
      .attr("height",10)
-     .attr("fill", "red");
+     .attr("fill", "red")
+     .on("mouseover", function(d){
+       console.log("说是");
+       var thisId = d3.select(this)
+                      .attr("id");
+      originalColor = d3.select(this).style("fill");
+       console.log("color: "+originalColor)
+       d3.select(this).style("fill","white");
+       d3.select("#tooltipJobCat")
+         .style("left", (d3.event.pageX+10)+"px")
+         .style("top", (d3.event.pageY+10)+"px")
+         .select("#tipCatAp")
+         .text((d.avgAp*100).toFixed(2)+"%");
+         //.text(thisId.split("-")[1]);
+       //  console.log("tooltip: "+d3.event.pageX+10+" Top: "+d3.event.pageY+10)
+       d3.select("#tipCat")
+         .text(d.cat);
+
+         if(flagtipRect == 1){
+           d3.select("#tooltipJobCat")
+             .classed("hidden", false);
+         }else{
+           d3.select("#tooltipJobCat")
+             .classed("hidden", true);
+         }
+
+     })
+     .on("mouseout",function(d){
+       d3.select(this).style("fill",originalColor);
+       d3.select("#tooltipJobCat")
+         .classed("hidden", true);
+     });
 
   svg.append("g")
       .attr("class","apDots")
@@ -133,6 +164,37 @@ d3.csv("./data/AP.csv").then(function(data){
      })
      .attr("opacity", function(d){
         return 0.4;
+     })
+     .on("mouseover", function(d){
+       console.log("说是");
+       var thisId = d3.select(this)
+                      .attr("id");
+      originalColor = d3.select(this).style("fill");
+       console.log("color: "+originalColor)
+       d3.select(this).style("fill","white");
+       d3.select("#tooltipJob")
+         .style("left", (d3.event.pageX+10)+"px")
+         .style("top", (d3.event.pageY+10)+"px")
+         .select("#tipJobAp")
+         .text((d.AP*100).toFixed(2)+"%");
+         //.text(thisId.split("-")[1]);
+       //  console.log("tooltip: "+d3.event.pageX+10+" Top: "+d3.event.pageY+10)
+       d3.select("#tipJob")
+         .text(d.Job);
+
+         if(flagtipDots == 1){
+           d3.select("#tooltipJob")
+             .classed("hidden", false);
+         }else{
+           d3.select("#tooltipJob")
+             .classed("hidden", true);
+         }
+
+     })
+     .on("mouseout",function(d){
+       d3.select(this).style("fill",originalColor);
+       d3.select("#tooltipJob")
+         .classed("hidden", true);
      });
 
 
@@ -218,6 +280,7 @@ d3.csv("../data/UMHistory.csv").then(function(data){
         svgStack.select("#allRects")
                 .append("rect")
                 .attr("width",7)
+                .attr("z-index",100)
                 .attr("height", function(d){
                   //console.log("last: "+yScaleStack(prevH+data[k].key));
                   //console.log("now: "+yScaleStack(prevH));
@@ -394,6 +457,7 @@ let secYourJob = () =>{
   secBgLeaves.style.opacity=1;
   introBgLeaves.style.visibility="hidden";
   introBgLeaves.style.opacity=0;
+  flagtipRect=0;
   document.getElementById("tc1").style.visibility="hidden";
   document.getElementById("tc1").style.opacity="0";
   document.getElementById("tc2").style.visibility="visible";
@@ -419,6 +483,7 @@ let secYourJob = () =>{
 
 }
 let fjob =() =>{
+  flagtipRect=1;
   //var manTempYPos = svgMan.style.marginTop.substr(0,svgMan.style.marginTop.length-1);
   //svgMan.style.position = "fixed"
   //svgMan.style.marginLeft = manJobXPos+"%";
@@ -431,8 +496,6 @@ let fjob =() =>{
   document.getElementById("container").style.opacity=1;
   document.getElementById("fixed").style.visibility="visible";
   document.getElementById("fixed").style.opacity = 1;
-  document.getElementById("fixedStack").style.visibility="visible";
-  document.getElementById("fixedStack").style.opacity=fixed;
   document.getElementById("containerStack").style.visibility="visible";
   document.getElementById("containerStack").style.opacity=1;
 
@@ -463,16 +526,23 @@ let fdiv2 =() =>{
   $('.apAvgs').css("opacity","1");
   $('.apDots').css("visibility","hidden");
   $('.apDots').css("opacity","0");
-  flagtipDot = 0;
+  flagtipDots = 0;
 }
 let fdiv3 =() =>{
-  flagtipDot = 1;
+  flagtipDots = 1;
   $('.apDots').css("visibility","visible");
   $('.apDots').css("opacity","1");
+  document.getElementById("tc3").style.visibility = "hidden";
+  document.getElementById("tc3").style.opacity=0;
+
+  document.getElementById("fixedStack").style.visibility="hidden";
+  document.getElementById("fixedStack").style.opacity=0;
+
 }
 
 let tc3 =() =>{
-  flagtipDot = 0;
+  flagtipDots = 0;
+    flagtipRect=0;
   svgMan.style.marginTop = "320%";
   svgMan.style.visibility = "visible";
   svgMan.style.opacity = 1;
