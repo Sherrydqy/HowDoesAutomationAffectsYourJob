@@ -166,7 +166,6 @@ d3.csv("./data/AP.csv").then(function(data){
         return 0.4;
      })
      .on("mouseover", function(d){
-       console.log("说是");
        var thisId = d3.select(this)
                       .attr("id");
       originalColor = d3.select(this).style("fill");
@@ -779,8 +778,8 @@ let tc6 =() =>{
   document.getElementById("fixedLeaves").style.opacity=0;
   document.getElementById("containerLeaves").style.visibility="hidden";
   document.getElementById("containerLeaves").style.opacity=0;
-  document.getElementById("fixedTree").style.visibility="visible";
-  document.getElementById("fixedTree").style.opacity=1;
+  document.getElementById("fixedTree").style.visibility="hidden";
+  document.getElementById("fixedTree").style.opacity=0;
   document.getElementById("containerTree").style.visibility="visible";
   document.getElementById("containerTree").style.opacity=1;
   document.getElementById("fixedLeaves").style.visibility="hidden";
@@ -806,6 +805,8 @@ let div1Tree =() =>{
     svgMan.style.opacity=0;
     svgPreBg.style.visibility = 'hidden';
     svgPreBg.style.opacity = 0;
+    document.getElementById("fixedTree").style.visibility="visible";
+    document.getElementById("fixedTree").style.opacity=1;
     document.getElementById("vizTree").style.visibility= "visible";
     document.getElementById("vizTree").style.opacity = "1";
     document.getElementById("shugan").style.visibility= "visible";
