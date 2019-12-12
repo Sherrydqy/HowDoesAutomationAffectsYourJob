@@ -39,7 +39,7 @@ var xScaleJob, xAxisJob, yScaleJobCat, yScaleJobLine, yScaleJobAvg, xScaleStack,
 
 
 /*---------- Reading AP Data Starts-------*/
-d3.csv("../data/AP.csv").then(function(data){
+d3.csv("../../data/AP.csv").then(function(data){
   console.log(data);
   data.forEach(function(d){
     d3.select("#jobDropDown")
@@ -171,7 +171,7 @@ d3.csv("../data/AP.csv").then(function(data){
 /*---------- Reading AP Data Ends-------*/
 
 /*---------- Reading History Data Starts-------*/
-d3.csv("../data/UMHistory.csv").then(function(data){
+d3.csv("../../data/UMHistory.csv").then(function(data){
   console.log(data);
   xScaleStack = d3.scaleLinear()
                   .domain([1950, 2010])
@@ -281,7 +281,7 @@ d3.csv("../data/UMHistory.csv").then(function(data){
 });
 /*---------- Reading History Data Ends-------*/
 /*---------- Reading Leaves Data Ends-------*/
-d3.csv("../data/JobIncrease.csv").then(function(data){
+d3.csv("../../data/JobIncrease.csv").then(function(data){
 
 })
 /*---------- Reading Leaves Data Ends-------*/
@@ -293,7 +293,7 @@ function changeMyJob(){
     myJob = document.getElementById("jobDropDown").options[myJobId].text;
   }
   //console.log(myJobId+": "+myJob);
-  d3.csv("../data/AP.csv").then(function(data){
+  d3.csv("../../data/AP.csv").then(function(data){
     document.getElementById("data-ap").innerHTML = (data[myJobId].AP*100).toFixed(2)+"%"
     if(myJobId!=0){
 
@@ -324,7 +324,7 @@ function changeMyJob(){
 
       svg.append("g")
          .append("svg:image")
-         .attr("xlink:href","../assets/man.svg")
+         .attr("xlink:href","../../assets/man.svg")
          .attr("x", function(d){
            console.log("thithithi: "+data[myJobId].Job);
                return xScaleJob(parseFloat(data[myJobId].AP)*100);
